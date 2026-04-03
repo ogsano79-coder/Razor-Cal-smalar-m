@@ -1,0 +1,15 @@
+﻿@page
+@model test8.Pages.test8Model
+@if (Model.Isimler.Count > 0)
+{
+    <ul>
+        @foreach (var isim in Model.Isimler)
+        {
+            <li>@isim</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Liste boş</p>
+}
