@@ -1,0 +1,18 @@
+﻿@page
+@model WebApplication2.Pages.Index1Model
+@{
+    // 6 tane sayıdan oluşan liste
+    List<int> sayilar = new List<int> { 2, 3, 8, 12, 5, 20 };
+}
+
+<h2>Çift Sayılar</h2>
+
+<ul>
+@foreach (var sayi in sayilar)
+{
+    if (sayi % 2 == 0)
+    {
+        <li>@sayi</li>
+    }
+}
+</ul>
