@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Kare Alma";
+}
+
+<h2>Sayı Karesi Hesaplama</h2>
+
+<form>
+    <input type="text" placeholder="Sayı giriniz." value="0" onkeypress="kareAl(this)" />
+    <p id="sonuc">0</p>
+</form>
+
+@section Scripts {
+    <script>
+        function kareAl(a) {
+            let sayi = a.value;
+            let sonuc = sayi * sayi;
+            document.getElementById("sonuc").innerHTML = sonuc;
+        }
+    </script>
+}
