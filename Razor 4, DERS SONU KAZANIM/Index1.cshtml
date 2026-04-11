@@ -1,0 +1,36 @@
+﻿@page
+@model WebApplication1.Pages.Index1Model
+
+@{
+    List<string> ogrenciler = new List<string>()
+    {
+        "Ali",
+        "Ali",
+        "Ali",
+        "Ayşe",
+        "Mehmet",
+        "Zeynep",
+        "Can"
+    };
+}
+
+@if (ogrenciler.Count == 0)
+{
+    <p>Kayıt yok</p>
+}
+else
+{
+    <ul>
+        @foreach (var ogrenci in ogrenciler)
+        {
+            <li>
+                @ogrenci
+
+                @if (ogrenci == "Ali")
+                {
+                    <span> ⭐ </span>
+                }
+            </li>
+        }
+    </ul>
+}
