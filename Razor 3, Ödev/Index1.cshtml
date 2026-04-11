@@ -1,0 +1,37 @@
+﻿@page
+@model WebApplication3.Pages.Index1Model
+@{
+    string mesaj = "";
+    int yas = 0;
+
+    if (Request.Method == "POST")
+    {
+        yas = Convert.ToInt32(Request.Form["yas"]);
+
+        if (yas < 0)
+        {
+            mesaj = "Hata: Yaş 0'dan küçük olamaz!";
+        }
+        else if (yas >= 18)
+        {
+            mesaj = "Reşitsiniz";
+        }
+        else
+        {
+            mesaj = "Reşit değilsiniz";
+        }
+    }
+}
+
+<h2>Yaş Kontrol</h2>
+
+<form method="post">
+    <label>Yaş giriniz:</label>
+    <input type="number" name="yas" required />
+    <button type="submit">Gönder</button>
+</form>
+
+@if (!string.IsNullOrEmpty(mesaj))
+{
+    <p><strong>@mesaj</strong></p>
+}
