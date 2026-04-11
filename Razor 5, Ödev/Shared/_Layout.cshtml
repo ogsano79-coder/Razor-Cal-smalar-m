@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Uygulaması</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav style="background-color: #333; padding: 10px;">
+        <a href="/" style="color:white;">Ana Sayfa</a>
+        <a href="/test1" style="color:white; margin-left:10px;">Test1</a>
+        <a href="/test2" style="color:white; margin-left:10px;">Test2</a>
+    </nav>
+
+    <!-- SAYFA İÇERİĞİ -->
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="background-color:#eee; padding:10px; margin-top:20px;">
+        <p>Yiğit Özgömeç</p> <!-- Buraya kendi adını yaz -->
+    </footer>
+
+</body>
+</html>
