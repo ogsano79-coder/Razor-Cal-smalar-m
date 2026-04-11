@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+
+<style>
+    .center-container {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-area {
+        text-align: center;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        margin: 0 auto 15px auto;
+        border-radius: 0px;
+    }
+</style>
+
+<div class="center-container">
+    <div class="box-area">
+        <div class="box" id="box"></div>
+
+        <input type="radio" name="radius" onclick="setRadius(0)"> 0 px<br>
+        <input type="radio" name="radius" onclick="setRadius(10)"> 10 px<br>
+        <input type="radio" name="radius" onclick="setRadius(25)"> 25 px<br>
+        <input type="radio" name="radius" onclick="setRadius(50)"> 50 px<br>
+    </div>
+</div>
+
+<script>
+    function setRadius(value) {
+        document.getElementById("box").style.borderRadius = value + "px";
+    }
+</script>
